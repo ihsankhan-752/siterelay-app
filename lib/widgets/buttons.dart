@@ -37,7 +37,7 @@ class PrimaryButton extends StatelessWidget {
               title,
               style: GoogleFonts.inter(
                 fontSize: 14,
-                color: titleColor ?? AppColors.primaryColor,
+                color: titleColor ?? AppColors.primaryBlack,
                 fontWeight: FontWeight.w600,
               ),
             ),
