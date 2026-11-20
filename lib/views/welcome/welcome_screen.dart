@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:siterelay/constant/app_colors.dart';
-import 'package:siterelay/views/splash/splash_screen.dart';
 import 'package:siterelay/views/welcome/widgets/dot_widget.dart';
 import 'package:siterelay/views/welcome/widgets/hero_widget.dart';
 import 'package:siterelay/widgets/buttons.dart';
+
+import '../onboarding/onboarding_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -50,7 +51,7 @@ class WelcomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (_) => SplashScreen()),
+                    MaterialPageRoute(builder: (_) => OnboardingScreen()),
                   );
                 },
               ),

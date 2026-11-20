@@ -10,4 +10,8 @@ class AppColors {
   static const onPrimaryColor = Color(0xFF1000A9);
   static const greenColor = Color(0xFF4ADE80);
   static const mutedColor = Color(0xFF9AA0B2);
+  static const cardColor = Color(0xFF12151C);
+  static const innerColor = Color(0xFF0B0E14);
+  static const iconBoxColor = Color(0xFF1B1F2B);
+  static const accentColor = Color(0xFF8083FF);
 }
