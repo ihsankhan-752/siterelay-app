@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:siterelay/constant/app_colors.dart';
-
-import 'onboarding_screen.dart';
+import 'package:siterelay/views/welcome/widgets/dot_widget.dart';
+import 'package:siterelay/widgets/buttons.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -41,9 +41,9 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 22),
-              _buildDots(),
+              dotWidget(),
               const SizedBox(height: 22),
-              _buildPrimaryButton(context),
+              PrimaryButton(title: "Get Started"),
               const SizedBox(height: 10),
               _buildSecondaryButton(context),
             ],
@@ -127,60 +127,6 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildDots() {
-    Widget dot(bool active) => AnimatedContainer(
-      duration: const Duration(milliseconds: 250),
-      margin: const EdgeInsets.symmetric(horizontal: 3),
-      width: active ? 22 : 6,
-      height: 4,
-      decoration: BoxDecoration(
-        color: active ? AppColors.primaryColor : Colors.white24,
-        borderRadius: BorderRadius.circular(2),
-      ),
-    );
-
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [dot(true), dot(false), dot(false)],
-    );
-  }
-
-  Widget _buildPrimaryButton(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 52,
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.of(
-            context,
-          ).push(MaterialPageRoute(builder: (_) => const OnboardingScreen()));
-        },
-        style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.primaryColor,
-          foregroundColor: AppColors.onPrimaryColor,
-          elevation: 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
-          ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Get Started',
-              style: GoogleFonts.inter(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            const SizedBox(width: 8),
-            const Icon(Icons.arrow_forward, size: 18),
           ],
         ),
       ),
